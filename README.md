@@ -123,7 +123,7 @@ Fig.7: Example of the flat format using the "Identical File" procedure.
 - Middle-click anywhere in the window to alternate between light and dark mode.
 - `ctrl+w` to close the window.
 
-
+<br>
 # FileNinja AddOn
 FileNinja AddOn takes FileNinja output as input, and runs the selected procedure accordingly. This documentation will assume you understand the intricacies of FileNinja. To open FileNinja AddOn, [it is required to set up an API key](https://platform.openai.com/docs/libraries?language=python&desktop-os=windows#create-and-export-an-api-key).
 
