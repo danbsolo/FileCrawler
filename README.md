@@ -126,7 +126,7 @@ Fig.7: Example of the flat format using the "Identical File" procedure.
 <br>
 
 # FileNinja AddOn
-FileNinja AddOn takes FileNinja output as input, and runs the selected procedure accordingly. This documentation will assume you understand the intricacies of FileNinja. To open FileNinja AddOn, [it is required to set up an API key](https://platform.openai.com/docs/libraries?language=python&desktop-os=windows#create-and-export-an-api-key).
+FileNinja AddOn takes FileNinja output as input, and runs the selected procedure accordingly. This documentation will assume you understand the intricacies of FileNinja. To open FileNinja AddOn, [it is required to set up an OpenAI API key](https://platform.openai.com/docs/libraries?language=python&desktop-os=windows#create-and-export-an-api-key).
 
 <div>
   <img src="assets/addOnStartup.png"/>
