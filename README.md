@@ -123,3 +123,32 @@ Fig.7: Example of the flat format using the "Identical File" procedure.
 - Middle-click anywhere in the window to alternate between light and dark mode.
 - `ctrl+w` to close the window.
 
+
+# FileNinja AddOn
+FileNinja AddOn takes FileNinja output as input, and runs the selected procedure accordingly. This documentation will assume you understand the intricacies of FileNinja. To open FileNinja AddOn, [it is required to set up an API key](https://platform.openai.com/docs/libraries?language=python&desktop-os=windows#create-and-export-an-api-key).
+
+<div>
+  <img src="../assets/addOnStartup.png"/>
+</div>
+Fig.1: AddOn GUI.
+
+# Explanation of Basic Elements
+| Element | Description |
+|---|---|
+| Browse to Select | Select the Excel workbook to select a worksheet from. |
+| Input Worksheet | Select the worksheet from the workbook to perform operations from. |
+| Procedure | Select a procedure. (Further explanation below.) |
+| Input column | Type the input column (i.e. A). (Further explanation below.) |
+| Output column | Type the output column (i.e. B). (Further explanation below.) |
+| Row Range | Type the range of rows to perform operations on. |
+| Results | Open results directory. |
+| Execute | Commence execution. |
+
+# Procedures
+| Name | Description | Input column | Output column |
+|---|---|---|---|
+| Name-Chop AI Query (TREE) | Based on ``aiQueryPrompt.txt``, suggests a new name with a primary goal of fixing naming convention errors, and a secondary goal of shortening the text.<br>NOTE: AI can mess up. If it does and it is detected, the "Flagged Bits" row in the summary sheet will be populated with a list of flagged rows and/or row ranges. | Set this to the column of file names. | Set this to an empty column to output suggested renames to. | 
+| Name-Chop Modifier (TREE) | Intended to take ``Name-Chop AI Query (TREE)`` output as input, modifies all files to the suggested renames. If a row's cells are empty in either column, no rename happens. If successful, the output column cell will be highlighted green. If failure, it will be highlighted red. If both cells contain identical text, no highlighting.<br>NOTE: Column A must be the directory column. | Set this to the column of file names as they are. | Set this to the column of suggested renames. |
+| File-Shred (STAGE FOR DELETION) | For any file names highlighted red, stage them for deletion in a separate column. | Set this to the column of file names, where some (or all) are highlighted red. | Set this to an empty column, which will become the "staged for deletion" column. |
+| File-Shred (FLAT) | Delete all files staged for deletion. Expects input of the FLAT format. | Set this to the column of file names. The column of directories is assumed to be to the immediate right of the input column. | Set this to the "staged for deletion" column. |
+| File-Shred (TREE) | Delete all files staged for deletion. Expects input of the TREE format.<br>NOTE: Column A must be the directory column. | Set this to the column of file names. | Set this to the "staged for deletion" column. |
