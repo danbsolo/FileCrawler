@@ -8,6 +8,7 @@ FileNinja automates information management tasks that are not feasibly done manu
 Fig.1: Lite GUI on startup.
 <br>
 Fig.2: Admin GUI with settings filled out and admin features highlighted.
+
 <br>
 <br>
 <div>
