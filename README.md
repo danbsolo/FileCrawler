@@ -1,5 +1,5 @@
 # FileNinja
-FileNinja automates information management tasks that are not feasibly done manually, then outputs the results in an Excel workbook. The Admin version includes everything from the Lite version, plus more features. (For FileNinjaAddOn documentation, click the ``FileNinjaAddOn`` folder.)
+FileNinja automates information management tasks that are not feasibly done manually, then outputs the results in an Excel workbook. The Admin version includes everything from the Lite version, plus more features.
 
 <div>
   <img src="assets/startupLite.png" style="width: 49%"/>
