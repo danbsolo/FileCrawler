@@ -1,5 +1,5 @@
 # FileNinja
-FileNinja automates information management tasks that are not feasibly done manually, then outputs the results in an Excel workbook. The Admin version includes everything from the Lite version, plus more features.
+FileNinja automates information management tasks that are not feasibly done manually, then outputs the results in an Excel workbook. The Admin version includes everything from the Lite version, plus more features. (For FileNinjaAddOn documentation, click the ``FileNinjaAddOn`` folder.)
 
 <div>
   <img src="assets/startupLite.png" style="width: 49%"/>
@@ -18,7 +18,7 @@ Fig.3: Advanced Options window.
 ## Lite Features
 | Element | Description |
 |---|---|
-| Browse to Select | Select the directory to perform procedures on. |
+| Browse to Include | Select the directories to perform procedures on. |
 | Browse to Exclude | Select subdirectories of the main directory to exclude from the scope. Hidden directories — and their subdirectories (hidden or not) — are excluded by default. To unexclude a directory, either double-click or right click it. If `Include Subdirectories` is disabled, this feature does nothing. |
 | Find procedures | Click the desired procedures to run. Each procedure outputs its own sheet in the workbook. |
 | Parameter# | Procedures that end in `#` require an argument. Input their arguments here. If running multiple procedures, separate arguments using `/`, in order from top to bottom of the list of procedures selected.<br>Other than the search functions, all Find procedures have a default value. To use its default value, either input nothing in the parameter field, or separate by slashes and leave its value blank.<br>**Example 1:** If running `Search Function (FILE)#` and `Multiple Version#~`, you may input `thingToSearch / 90`.<br>**Example 2:** If running `Search Function (DIR)#`, `Old File#~`, and `Empty Directory#~`, you may input `thingToSearch * thingToSearch2 / /`. This will use the latter two procedures' default values. |
@@ -115,8 +115,23 @@ Fig.7: Example of the flat format using the "Identical File" procedure.
     - `Program/script` = `<<Name-Of-Your-Exe>>.exe`
     - `Add arguments` = The location of the JSON settings you want to run. (ex: "C:\\Users\\FirstName LastName\\routineRunSettings.json"). **MUST** be in quotes.
     - `Start in` = The directory in which `<<Name-Of-Your-Exe>>.exe` resides. (ex: C:\\Users\\FirstName LastName\\). Must **NOT** be in quotes.
-- Press finish.
+- Press ``Finish``.
 - Right-click the newly created task, then press `Run` to ensure you set your program details correctly.
+
+## Mapping a SharePoint Document Library as a Network Drive
+This enables using FileNinja on SharePoint.
+**NOTE:** This process may be obsolete if you have access to synced document libraries via OneDrive.
+- Navigate to your SharePoint document library.
+- Copy the URL (e.g. ``http://sp2019.apca2.gc.ca/sites/pb020/Training%20Material/Forms/AllItems.aspx``)
+- Convert it:
+    - Remove protocol (i.e. ``http:``).
+    - Remove everything after the name of the document library (i.e. ``/Forms/AllItems.aspx``).
+    - If your document library name has spaces, ``%20`` will be present in the URL. Replace these with actual space characters (e.g. ``//sp2019.apca2.gc.ca/sites/pb020/Training Material``).
+- Navigate to File Explorer on Windows. 
+- Right-click ``This PC`` and select ``Map Network Drive...``.
+- Under ``Folder:``, paste your converted link from earlier.
+- Press ``Finish``.
+- At this point, you may be required to log in.
 
 ## Miscellaneous
 - Hover your mouse over GUI elements for a short tooltip.
