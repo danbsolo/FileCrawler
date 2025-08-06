@@ -5,8 +5,8 @@ FileNinja automates information management tasks that are not feasibly done manu
   <img src="assets/startupLite.png" style="width: 49%"/>
   <img src="assets/adminFilledEdited.png" style="width: 49%"/>
 </div>
-Fig.1 & Fig.2: Lite GUI vs Admin GUI.
-
+Fig.1: Lite GUI on startup.
+Fig.2: Admin GUI with settings filled out and admin features highlighted.
 <br>
 <br>
 <div>
