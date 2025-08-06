@@ -3,7 +3,7 @@ FileNinja automates information management tasks that are not feasibly done manu
 
 <div>
   <img src="assets/startupLite.png" style="width: 49%"/>
-  <img src="assets/startupAdminEdited.png" style="width: 49%"/>
+  <img src="assets/adminFilledEdited.png" style="width: 49%"/>
 </div>
 Fig.1 & Fig.2: Lite GUI vs Admin GUI.
 
